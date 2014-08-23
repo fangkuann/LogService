@@ -1,0 +1,18 @@
+$def with(name, form)
+
+$if name:
+	I just want to say <em>hello, </em>$name
+$else:
+	<em>hello, </em>world
+
+
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Try again, AmeriCAN:</p>
+$form.render()
+<input type="submit" /></form>
+
+<form method="post" action="add">
+<p><input type="text" name="title" /> <input type="submit" value="" /></p>
+</form>
+
+
